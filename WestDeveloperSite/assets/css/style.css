@@ -1768,3 +1768,7 @@ p.copyright {
     color: black;
     font-weight: 200;
 }
+
+.italic {
+    font-style: italic;
+}

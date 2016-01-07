@@ -1,58 +1,27 @@
-﻿
-//MODAL TEXT BOX COLOR CHANGE
+﻿$(document).ready(function () {
 
-    function textboxColor() {
+// MODAL CLICK FUNCTIONS
+    $("#submitFive").click(getValues);
 
-        var textbox = document.getElementsByClassName("text-input");
+    $('#submitFactorial').click(getFactorial);
 
-        textbox.style.backgroundColor = "#ffffff";
-    }
-/*
-   //SCROLL TO ANCHOR WITHIN DOCUMENT
-    function filterPath(string) {
-        return string
-        .replace(/^\//,'')
-        .replace(/(index|default).[a-zA-Z]{3,4}$/,'')
-        .replace(/\/$/,'');
-    }
-    var locationPath = filterPath(location.pathname);
-    var scrollElem = scrollableElement('html', 'body');
-    // Any links with hash tags in them (can't do ^= because of fully qualified URL potential)
-    $('a[href*=#]').each(function() {
-        // Ensure it's a same-page link
-        var thisPath = filterPath(this.pathname) || locationPath;
-        if (  locationPath == thisPath
-            && (location.hostname == this.hostname || !this.hostname)
-            && this.hash.replace(/#/,'') ) {
-            // Ensure target exists
-            var $target = $(this.hash), target = this.hash;
-            if (target) {
-                // Find location of target
-                var targetOffset = $target.offset().top;
-                $(this).click(function(event) {
-                    // Prevent jump-down
-                    event.preventDefault();
-                    // Animate to target
-                    $(scrollElem).animate({scrollTop: targetOffset}, 2000, function() {
-                        // Set hash in URL after animation successful
-                        location.hash = target;
-                    });
-                });
-            }
-        }
- */
+    $('#submitFizz').click(runMultiples);
 
-    //FIVE NUMBERS
+    $('#submitPalindrome').click(testPalindrome);
+
+// MODAL UNDERLYING FUNCTIONS
+
+    //Five Numbers
     function getValues() {
-        var userEntry = document.getElementById("userEntryFive").value
 
+        var userEntry = $('#userEntryFive').val();
         var splitEntry = userEntry.split(" ", 5);
 
-        document.getElementById("min").innerHTML = "Minimum value: " + min(splitEntry);
-        document.getElementById("max").innerHTML = "Maximum value: " + max(splitEntry);
-        document.getElementById("product").innerHTML = "Product: " + product(splitEntry);
-        document.getElementById("sum").innerHTML = "Sum: " + sum(splitEntry);
-        document.getElementById("mean").innerHTML = "Mean: " + mean(splitEntry);
+        $('#min').text('Minimum value: ' + min(splitEntry));
+        $('#max').text('Maximum value: ' + max(splitEntry));
+        $('#product').text('Product: ' + product(splitEntry));
+        $('#sum').text('Sum: ' + sum(splitEntry));
+        $('#mean').text('Mean: ' + mean(splitEntry));
     }
 
     function min(numbers) {
@@ -81,10 +50,15 @@
         var mean = (sum(numbers) / numbers.length);
         return mean;
     }
-        /*
-    //FACTORIAL
+
+    //Factorial
+    function getFactorial() {
+        var num = $('#userEntryFactorial').val();
+        $('#resultFactorial').text('Answer: ' + (factorial(num)))
+    }
+
     function factorial(num) {
-        
+
         var num = parseInt(num, 10);
         var temp = 1;
 
@@ -96,30 +70,23 @@
             return "Please enter a positive integer.";
         else
             for (var i = 1; i <= num; i++) {
-                 temp *= i;
+                temp *= i;
             }
 
         var answer = temp;
         return answer;
     }
 
-    function getFactorial() {
-        var num = document.getElementById("userEntryFactorial").value.trim();
-        document.getElementById("resultFactorial").innerHTML = "Answer: " + (factorial(num));
-    }
-
-    //FIZZBUZZ
+    //Fizz Buzz
     function runMultiples() {
 
-        var userEntry = document.getElementById("userEntryFizz").value
+        var userEntry = $('#userEntryFizz').val();
         var splitEntry = userEntry.split(" ", 2);
 
         var fullOutput = "";
-        var newLine = "";
 
-        for (var i = 0; i < splitEntry.length; i++) {
-            splitEntry[i] = parseInt(splitEntry[i], 10);
-        }
+        var i = 0;
+        $.each(parseInt(splitEntry[i], 10));
 
         for (i = 1; i <= 100; i++) {
             newLine = "";
@@ -134,11 +101,22 @@
 
             fullOutput += newLine + "<br/>";
 
-            document.getElementById("resultFizz").innerHTML = fullOutput;
+            $('#resultFizz').html(fullOutput);
+            //.text will input <br/> as a string, but .html formats it as a line break
         }
     }
 
-//PALINDROME
+    //PALINDROME
+    function testPalindrome() {
+
+        var wordToInvert = $('#userEntryPalindrome').val();
+
+        if (invert(wordToInvert) == wordToInvert)
+            $('#resultPalindrome').text('Congratulations, this is a palindrome!');
+        else
+            $('#resultPalindrome').text('Sorry, this is not a palindrome.');
+    }
+
     function invert(wordToInvert) {
 
         var invertedWord = "";
@@ -148,20 +126,69 @@
         }
 
         return invertedWord;
-
     }
 
-    function testPalindrome() {
+    //RESET MODAL ON CLOSE
+    $(".modal").on("hidden.bs.modal", function () {
+        $(".result").text("")
+        //.end()
+        alert('test')
+        $(".text-input").text("")
+        alert('test');
+    });
 
-        var wordToInvert = document.getElementById("userEntryPalindrome").value;
+    //MODAL TEXT BOX COLOR CHANGE
+    $(".text-input").change(
+        function () {
+            $(this).css({'background-color' : '#ffffff'});
+        });
+  
+    //AUTOFOCUS WITHIN MODAL   
+    $('.modal').on('shown.bs.modal', function () {
+        $(this).find('[autofocus]').focus();
+    });
 
-        if (invert(wordToInvert) == wordToInvert)
-            document.getElementById("resultPalindrome").innerHTML = "Congratulations, this is a palindrome!";
-        else
-            document.getElementById("resultPallindrome").innerHTML = "Sorry, this is not a palindrome."
+    /*
+ 
+       //SCROLL TO ANCHOR WITHIN DOCUMENT
+        function filterPath(string) {
+            return string
+            .replace(/^\//,'')
+            .replace(/(index|default).[a-zA-Z]{3,4}$/,'')
+            .replace(/\/$/,'');
+        }
+        var locationPath = filterPath(location.pathname);
+        var scrollElem = scrollableElement('html', 'body');
+        // Any links with hash tags in them (can't do ^= because of fully qualified URL potential)
+        $('a[href*=#]').each(function() {
+            // Ensure it's a same-page link
+            var thisPath = filterPath(this.pathname) || locationPath;
+            if (  locationPath == thisPath
+                && (location.hostname == this.hostname || !this.hostname)
+                && this.hash.replace(/#/,'') ) {
+                // Ensure target exists
+                var $target = $(this.hash), target = this.hash;
+                if (target) {
+                    // Find location of target
+                    var targetOffset = $target.offset().top;
+                    $(this).click(function(event) {
+                        // Prevent jump-down
+                        event.preventDefault();
+                        // Animate to target
+                        $(scrollElem).animate({scrollTop: targetOffset}, 2000, function() {
+                            // Set hash in URL after animation successful
+                            location.hash = target;
+                        });
+                    });
+                }
+            }
+        */
+   
 
-    }
+
+    /*
+  
 */
 
-//----------------------TESTING JQUERY ----------------//
-$("#submitFive").click(getValues());
+    //----------------------TESTING JQUERY ----------------//
+});

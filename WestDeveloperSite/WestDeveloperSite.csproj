@@ -269,6 +269,8 @@
     <Content Include="assets\images\dot.gif" />
     <Content Include="assets\images\favicon.png" />
     <Content Include="assets\images\grabbing.png" />
+    <Content Include="assets\images\hero-maroonBells.png" />
+    <Content Include="assets\images\light-logo-mine.png" />
     <Content Include="assets\images\logo-light.png" />
     <Content Include="assets\images\logo.png" />
     <Content Include="assets\images\map-icon.png" />
