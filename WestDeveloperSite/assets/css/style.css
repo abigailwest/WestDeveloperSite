@@ -1772,3 +1772,103 @@ p.copyright {
 .italic {
     font-style: italic;
 }
+
+.mar-bot {
+    margin-bottom: 10px!important;
+}
+
+.mar-top {
+    margin-top: 0px!important;
+}
+
+.carousel-control {
+    background-image:none!important;
+    outline:none!important;
+    visibility: hidden;
+    color:#16a085;
+    width:30px;
+}
+.carousel:hover .carousel-control {
+  visibility: visible;
+}
+
+.carousel-control.left {
+    left: -30px;
+}
+
+.carousel-control.right {
+    right: -30px;
+}
+
+ol.carousel-indicators {
+    position:relative;
+    list-style-type:none;
+    bottom:0;
+}
+
+.carousel-indicators li {
+    text-indent:0;
+    color: #16a085;
+    width:auto;
+    height:2em;
+    background-color:transparent;
+    text-align:center;
+    display: inline-block;
+    margin:5px 0;
+}
+
+#carousel-nav {
+    margin: auto;
+}
+
+.modal-header-size {
+    height:60px;
+    padding:5px;
+}
+
+#header-modal {
+    text-align:center;
+}
+
+.modal-dialog-fullHeight {
+  width: 90%;
+  min-height: 100%;
+  padding: 0;
+}
+
+.modal-content-fullHeight {
+  min-height: 100%;
+}
+
+/*this is a temp block
+.modal-dialog {
+ height: 100%;
+ margin: 0;
+ padding: 10px;
+}
+.modal-content { height:100%; }
+.modal-body {
+position: absolute;
+padding: 15px;
+left:0;
+right:0;
+top: 55px;
+bottom: 65px;
+margin: auto;
+}
+.modal-body > p {
+height: 100%;
+margin: 0;
+}
+.img-responsive{
+max-height: 100%;
+max-width: 100%;
+margin:auto;
+}
+.modal-footer {
+position: absolute;
+bottom: 0;
+left: 0;
+right: 0;
+}
+/*-----*/

@@ -13,7 +13,7 @@
 
     //Five Numbers
     function getValues() {
-
+        alert('test');
         var userEntry = $('#userEntryFive').val();
         var splitEntry = userEntry.split(" ", 5);
 
@@ -99,7 +99,7 @@
             else
                 newLine = i;
 
-            fullOutput += newLine + "<br/>";
+            fullOutput += newLine + "  ";
 
             $('#resultFizz').html(fullOutput);
             //.text will input <br/> as a string, but .html formats it as a line break
@@ -132,9 +132,7 @@
     $(".modal").on("hidden.bs.modal", function () {
         $(".result").text("")
         //.end()
-        alert('test')
         $(".text-input").text("")
-        alert('test');
     });
 
     //MODAL TEXT BOX COLOR CHANGE
@@ -143,10 +141,13 @@
             $(this).css({'background-color' : '#ffffff'});
         });
   
-    //AUTOFOCUS WITHIN MODAL   
+    //AUTOFOCUS AND PAUSE MODAL   
     $('.modal').on('shown.bs.modal', function () {
-        $(this).find('[autofocus]').focus();
+        $(this).find('[autofocus]').focus()
+        $('#carousel-javascript').carousel('pause');
     });
+
+});
 
     /*
  
@@ -191,4 +192,3 @@
 */
 
     //----------------------TESTING JQUERY ----------------//
-});
