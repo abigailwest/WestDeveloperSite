@@ -254,6 +254,7 @@
     <Content Include="assets\images\apple-touch-icon.png" />
     <Content Include="assets\images\apple.png" />
     <Content Include="assets\images\arrow.png" />
+    <Content Include="assets\images\buzz.png" />
     <Content Include="assets\images\clients\logo-1.png" />
     <Content Include="assets\images\clients\logo-10.png" />
     <Content Include="assets\images\clients\logo-11.png" />
@@ -268,7 +269,9 @@
     <Content Include="assets\images\clients\logo-9.png" />
     <Content Include="assets\images\dot.gif" />
     <Content Include="assets\images\favicon.png" />
+    <Content Include="assets\images\fizz.png" />
     <Content Include="assets\images\grabbing.png" />
+    <Content Include="assets\images\hero-evergreens.png" />
     <Content Include="assets\images\hero-maroonBells.png" />
     <Content Include="assets\images\light-logo-mine.png" />
     <Content Include="assets\images\logo-light.png" />

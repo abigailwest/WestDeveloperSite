@@ -1769,16 +1769,46 @@ p.copyright {
     font-weight: 200;
 }
 
+.text-color {
+    color:#16a085!important;
+}
+
+.text-dimin {
+    font-size:1.5em;
+    color:#333333;
+}
+
 .italic {
     font-style: italic;
 }
 
-.mar-bot {
-    margin-bottom: 10px!important;
+.pad-top {
+    padding-top:5px;
 }
 
-.mar-top {
+.pad-bot {
+    padding-bottom:5px;
+}
+
+
+.m-t-zero {
     margin-top: 0px!important;
+}
+
+.m-b-zero {
+    margin-bottom: 0px!important;
+}
+
+.m-b-hundred {
+    margin-bottom:100px;
+}
+
+.m-l-r {
+    margin: 0 30px;
+}
+
+.limit-height-50 {
+    max-height:50px;
 }
 
 .carousel-control {
@@ -1831,44 +1861,32 @@ ol.carousel-indicators {
 }
 
 .modal-dialog-fullHeight {
-  width: 90%;
+  width: 95%;
   min-height: 100%;
   padding: 0;
 }
 
 .modal-content-fullHeight {
   min-height: 100%;
+
 }
 
-/*this is a temp block
-.modal-dialog {
- height: 100%;
- margin: 0;
- padding: 10px;
+.image-align {
+    vertical-align:middle;
 }
-.modal-content { height:100%; }
-.modal-body {
-position: absolute;
-padding: 15px;
-left:0;
-right:0;
-top: 55px;
-bottom: 65px;
-margin: auto;
+
+.img-t-m-200 {
+    margin-top:15%;
 }
-.modal-body > p {
-height: 100%;
-margin: 0;
+
+#getFact {
+    margin: 0 0 30px;
 }
-.img-responsive{
-max-height: 100%;
-max-width: 100%;
-margin:auto;
+
+#displayFact {
+    position: absolute;
+    right:5%;
+    width: 50%;
+    color:#16a085;
+    padding: 5px;
 }
-.modal-footer {
-position: absolute;
-bottom: 0;
-left: 0;
-right: 0;
-}
-/*-----*/
