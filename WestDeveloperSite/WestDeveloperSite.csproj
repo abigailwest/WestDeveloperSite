@@ -304,6 +304,7 @@
     <Content Include="assets\images\portfolio-single\single-6.jpg" />
     <Content Include="assets\images\portfolio-single\single-7.jpg" />
     <Content Include="assets\images\portfolio-single\single-700x700.jpg" />
+    <Content Include="assets\images\portrait.png" />
     <Content Include="assets\images\post-1.jpg" />
     <Content Include="assets\images\post-2.jpg" />
     <Content Include="assets\images\post-3.jpg" />
@@ -311,7 +312,9 @@
     <Content Include="assets\images\post-5.jpg" />
     <Content Include="assets\images\post-6.jpg" />
     <Content Include="assets\images\signature.png" />
+    <Content Include="assets\images\signaturefont.png" />
     <Content Include="assets\js\appear.js" />
+    <Content Include="assets\js\carfinder.js" />
     <Content Include="assets\js\contact.js" />
     <Content Include="assets\js\custom.js" />
     <Content Include="assets\js\gmap3.js" />
@@ -339,6 +342,7 @@
     <Content Include="assets\js\submenu-fix.js" />
     <Content Include="assets\js\wow.js" />
     <Content Include="assets\js\wow.min.js" />
+    <Content Include="carfinder.html" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="favicon.ico" />

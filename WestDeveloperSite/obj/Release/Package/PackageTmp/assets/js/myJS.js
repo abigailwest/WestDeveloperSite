@@ -9,13 +9,21 @@
 
     $('#submitPalindrome').click(testPalindrome);
 
+    $('#getFact').click(getFact);
+    
+    $('#getFact').click(borderShow);
+
 // MODAL UNDERLYING FUNCTIONS
 
     //Five Numbers
     function getValues() {
-        alert('test');
         var userEntry = $('#userEntryFive').val();
         var splitEntry = userEntry.split(" ", 5);
+        
+        if (splitEntry.length < 5) {
+            $('#min').text('Please enter five numbers.');
+            return;
+        };
 
         $('#min').text('Minimum value: ' + min(splitEntry));
         $('#max').text('Maximum value: ' + max(splitEntry));
@@ -99,10 +107,9 @@
             else
                 newLine = i;
 
-            fullOutput += newLine + "<br/>";
+            fullOutput += newLine + "  ";
 
             $('#resultFizz').html(fullOutput);
-            //.text will input <br/> as a string, but .html formats it as a line break
         }
     }
 
@@ -130,10 +137,10 @@
 
     //RESET MODAL ON CLOSE
     $(".modal").on("hidden.bs.modal", function () {
-        $(".result").text("")
-        //.end()
-        $(".text-input").text("")
+        $(".result").text("");
+        $(".text-input").val("");
     });
+
 
     //MODAL TEXT BOX COLOR CHANGE
     $(".text-input").change(
@@ -143,53 +150,40 @@
   
     //AUTOFOCUS AND PAUSE MODAL   
     $('.modal').on('shown.bs.modal', function () {
-        $(this).find('[autofocus]').focus()
+        $(this).find('[autofocus]').focus();
         $('#carousel-javascript').carousel('pause');
     });
-
-
-
-    /*
- 
-       //SCROLL TO ANCHOR WITHIN DOCUMENT
-        function filterPath(string) {
-            return string
-            .replace(/^\//,'')
-            .replace(/(index|default).[a-zA-Z]{3,4}$/,'')
-            .replace(/\/$/,'');
-        }
-        var locationPath = filterPath(location.pathname);
-        var scrollElem = scrollableElement('html', 'body');
-        // Any links with hash tags in them (can't do ^= because of fully qualified URL potential)
-        $('a[href*=#]').each(function() {
-            // Ensure it's a same-page link
-            var thisPath = filterPath(this.pathname) || locationPath;
-            if (  locationPath == thisPath
-                && (location.hostname == this.hostname || !this.hostname)
-                && this.hash.replace(/#/,'') ) {
-                // Ensure target exists
-                var $target = $(this.hash), target = this.hash;
-                if (target) {
-                    // Find location of target
-                    var targetOffset = $target.offset().top;
-                    $(this).click(function(event) {
-                        // Prevent jump-down
-                        event.preventDefault();
-                        // Animate to target
-                        $(scrollElem).animate({scrollTop: targetOffset}, 2000, function() {
-                            // Set hash in URL after animation successful
-                            location.hash = target;
-                        });
-                    });
-                }
-            }
-        */
    
+    //FUN FACT
 
+    var factArray = [];
 
-    /*
-  
-*/
+    function getFact() {
 
-    //----------------------TESTING JQUERY ----------------//
+        if (factArray.length === 0) { factArray = refillFact(); };
+
+        var randomIndex = Math.floor(Math.random() * factArray.length);
+        $('#displayFact').html(factArray[randomIndex]);
+
+        factArray.splice(randomIndex, 1);                  
+     }
+
+    function refillFact() {
+
+        return [
+            "After moving to western NC, I worked for most of a year as a custom cabinet maker. They were so impressed with my efficiency and attention to detail that I was soon promoted to running the entire production floor.",
+            "When the economy crashed in 2009, I decided not to get a Masters of Fine Arts. Instead, I started my very own gluten-free bakery! It was more successful than I intended, and I ended up selling it one year later.",
+            "I have summited four 14,000 foot peaks: Mt. Whitney, CA (twice); Mt. Shasta, CA; Mt. Sill, WY, and Snowmass Peak, CO. I also like to count K2, a 13,900 peak on the way to Capitol Peak, CO. Capitol is a fourteener than I still intend to conquer!",
+            "In 2010, my now-husband and I hiked 1,300 miles on the Pacific Crest Trail - from the south end of the Sierra Nevada, CA, to Crater Lake, OR. We were on the trail for two and a half months!",
+            "While studying abroad in Chile, I conducted a research experiment on the effect of community arts on social change.  Through this, I took part in mural and graffiti campaigns, and interviewed several former leaders of the movement against the dictator Augusto Pinochet.",
+            "In 2011, I spoke on a 'Women in Business' panel at the Carolina Farm Stewardship Association’s Sustainable Agriculture Conference in North Carolina. I was the youngest participant.",
+            "While acquiring my BFA, I focused on large-format woodcuts. Several of them are over 2' x 3' in size, and include over 150 hours of drawing and carving."
+        ];
+    }
+
+    function borderShow() {
+
+        $('#displayFact').css({ 'border': '1px solid #16a085', 'border-radius':'5px' });
+    }
 });
+

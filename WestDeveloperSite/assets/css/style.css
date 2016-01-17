@@ -1763,14 +1763,53 @@ p.copyright {
 
 /* -------------------------------- Added by Abigail -----------------------------------------*/
 
+
+a span {
+    display:none;
+    position: absolute;
+    width: 130px;
+    bottom:0;
+    left:15px;
+}
+
+a:hover span {
+    display:block;
+}
+
+a {
+    position: relative;
+}
+
+
+/* FORMS */
+
 #userEntryFive, #userEntryFactorial, #userEntryFizz, #userEntryPalindrome {
     background-color: #a5f3e4;
     color: black;
     font-weight: 200;
 }
 
+#getFact {
+    margin: 0 0 30px;
+}
+
+#displayFact {
+    position: absolute;
+    right:5%;
+    width: 50%;
+    color:#16a085;
+    padding: 5px;
+}
+
+
+/* TEXT DECORATION */
+
 .text-color {
     color:#16a085!important;
+}
+
+.text-black {
+    color:black;
 }
 
 .text-dimin {
@@ -1782,6 +1821,13 @@ p.copyright {
     font-style: italic;
 }
 
+.h-2em {
+    height:2em;
+}
+
+
+/* PADDING AND MARGINS */
+
 .pad-top {
     padding-top:5px;
 }
@@ -1789,7 +1835,6 @@ p.copyright {
 .pad-bot {
     padding-bottom:5px;
 }
-
 
 .m-t-zero {
     margin-top: 0px!important;
@@ -1811,6 +1856,14 @@ p.copyright {
     max-height:50px;
 }
 
+.w-80p {
+    width:80%;
+    margin:0 auto;
+}
+
+
+/* CAROUSEL */
+
 .carousel-control {
     background-image:none!important;
     outline:none!important;
@@ -1818,6 +1871,7 @@ p.copyright {
     color:#16a085;
     width:30px;
 }
+
 .carousel:hover .carousel-control {
   visibility: visible;
 }
@@ -1834,6 +1888,7 @@ ol.carousel-indicators {
     position:relative;
     list-style-type:none;
     bottom:0;
+    font-size:1.3em;
 }
 
 .carousel-indicators li {
@@ -1851,9 +1906,18 @@ ol.carousel-indicators {
     margin: auto;
 }
 
+
+/* MODAL */
+
 .modal-header-size {
-    height:60px;
+    height:80px;
     padding:5px;
+}
+
+.modal-subtitle {
+    margin-bottom:0;
+    text-align:center;
+    font-style:italic;
 }
 
 #header-modal {
@@ -1871,6 +1935,9 @@ ol.carousel-indicators {
 
 }
 
+
+/* IMAGE */
+
 .image-align {
     vertical-align:middle;
 }
@@ -1879,14 +1946,58 @@ ol.carousel-indicators {
     margin-top:15%;
 }
 
-#getFact {
-    margin: 0 0 30px;
+
+/* ICONS */
+
+.techbox-icon {
+    background: #16a085;
+    position: relative;
+    text-align: center;
+    font-size: 26px;
+    color: #fff;
+    width: 150px;
+    height: 150px;
+    margin: 0 auto;
+    -webkit-border-radius: 100%;
+    -moz-border-radius: 100%;
+    border-radius: 100%;
 }
 
-#displayFact {
-    position: absolute;
-    right:5%;
-    width: 50%;
-    color:#16a085;
-    padding: 5px;
+.techbox-icon:after {
+	background: transparent;
+	border: 2px solid transparent;
+	position: absolute;
+	display: block;
+	content: "";
+	top: 0;
+	height: 150px;
+	width: 150px;
+	-webkit-border-radius: 100%;
+	   -moz-border-radius: 100%;
+	     -o-border-radius: 100%;
+	        border-radius: 100%;
+	-webkit-transition: all 0.3s cubic-bezier(0.62, -0.37, 0.5, 1.64) 0s;
+	   -moz-transition: all 0.3s cubic-bezier(0.62, -0.37, 0.5, 1.64) 0s;
+	    -ms-transition: all 0.3s cubic-bezier(0.62, -0.37, 0.5, 1.64) 0s;
+	     -o-transition: all 0.3s cubic-bezier(0.62, -0.37, 0.5, 1.64) 0s;
+	        transition: all 0.3s cubic-bezier(0.62, -0.37, 0.5, 1.64) 0s;
+}
+
+.techbox-icon:hover:after {
+	border-color: #16a085;
+	-webkit-transition: scale(1.2);
+	    -moz-transform: scale(1.2);
+	     -ms-transform: scale(1.2);
+	      -o-transform: scale(1.2);
+	         transform: scale(1.2);
+}
+
+
+/* BUTTONS */
+
+.btn-center {
+    display:block;
+    margin:auto;
+    margin-top:20px;
+    margin-bottom:20px;
 }

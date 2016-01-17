@@ -1769,52 +1769,140 @@ p.copyright {
     font-weight: 200;
 }
 
+.text-color {
+    color:#16a085!important;
+}
+
+.text-dimin {
+    font-size:1.5em;
+    color:#333333;
+}
+
 .italic {
     font-style: italic;
 }
 
-.mar-bot {
-    margin-bottom: 10px!important;
+.pad-top {
+    padding-top:5px;
 }
 
-.mar-top {
+.pad-bot {
+    padding-bottom:5px;
+}
+
+
+.m-t-zero {
     margin-top: 0px!important;
 }
 
-.carousel-control, .carousel-control {
+.m-b-zero {
+    margin-bottom: 0px!important;
+}
+
+.m-b-hundred {
+    margin-bottom:100px;
+}
+
+.m-l-r {
+    margin: 0 30px;
+}
+
+.limit-height-50 {
+    max-height:50px;
+}
+
+.carousel-control {
     background-image:none!important;
     outline:none!important;
     visibility: hidden;
     color:#16a085;
+    width:30px;
 }
 .carousel:hover .carousel-control {
   visibility: visible;
 }
 
 .carousel-control.left {
-    left: -60px;
+    left: -30px;
 }
 
 .carousel-control.right {
-    right: -60px;
+    right: -30px;
 }
 
-ul.carousel-indicators {
+ol.carousel-indicators {
+    position:relative;
     list-style-type:none;
+    bottom:0;
 }
 
 .carousel-indicators li {
-    text-align: center;
-    color: black;
-}
-
-.modal-size {
-    margin: auto;
-    height: 80%;
-    width: 70%;
-    top:0;
+    text-indent:0;
+    color: #16a085;
+    width:auto;
+    height:2em;
+    background-color:transparent;
+    text-align:center;
+    display: inline-block;
+    margin:5px 0;
 }
 
 #carousel-nav {
-    margin: auto
+    margin: auto;
+}
+
+.modal-header-size {
+    height:60px;
+    padding:5px;
+}
+
+#header-modal {
+    text-align:center;
+}
+
+.modal-dialog-fullHeight {
+  width: 95%;
+  min-height: 100%;
+  padding: 0;
+}
+
+.modal-content-fullHeight {
+  min-height: 100%;
+
+}
+
+.image-align {
+    vertical-align:middle;
+}
+
+.img-t-m-200 {
+    margin-top:15%;
+}
+
+#getFact {
+    margin: 0 0 30px;
+}
+
+#displayFact {
+    position: absolute;
+    right:5%;
+    width: 50%;
+    color:#16a085;
+    padding: 5px;
+}
+
+a {
+    position: relative;
+}
+
+a span {
+    display:none;
+    position: absolute;
+    width: 130px;
+    bottom:0;
+    left:15px;
+}
+
+a:hover span {
+    display:block;
 }

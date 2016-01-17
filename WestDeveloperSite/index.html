@@ -135,12 +135,13 @@
                             <p id="displayFact"></p>
                             <button id="getFact" class="btn btn-dark btn-round" type="submit">Random Fun Fact</button>
                             <br/>
-							<ul class="list-unstyled">
+                            <a href="https://github.com/abigailwest" target="_blank" class="fa fa-github" alt="link to GitHub account"><span>Visit my GitHub page</span></a>
+                            <ul class="list-unstyled">
 								<li><abbr title="Phone">P:</abbr> (919) 548-0761</li>
 								<li>E-mail: <a href="mailto:abigailwwest@gmail.com">abigailwwest@gmail.com</a></li>
 							</ul>
 							<div class="m-t-30 m-b-hundred">
-                                <!-- INSERT SIGNATURE FILE HERE-->
+                                <!-- signature file-->
 								<img src="assets/images/signaturefont.png" alt="">
 							</div>
 						</div>
@@ -522,11 +523,12 @@
                     </button>
                     <div class="col-sm-8 col-sm-offset-2">
                         <h1 class="modal-title" id="header-modal">Javascript Exercises</h1>
+                        <p class="modal-subtitle">Created through the Coder Foundry curriculum, spring 2016</p>
                         <!-- Indicators -->
                         <ol class="carousel-indicators">
-                            <li data-target="#carousel-javascript" data-slide-to="0">Five Numbers</li>
-                            <li data-target="#carousel-javascript" data-slide-to="1">Factorial</li>
-                            <li data-target="#carousel-javascript" data-slide-to="2">Multiples</li>
+                            <li data-target="#carousel-javascript" data-slide-to="0">Five Numbers |</li>
+                            <li data-target="#carousel-javascript" data-slide-to="1">Factorial  |</li>
+                            <li data-target="#carousel-javascript" data-slide-to="2">Multiples  |</li>
                             <li data-target="#carousel-javascript" data-slide-to="3">Palindrome</li>
                         </ol>
                     </div>
@@ -559,6 +561,11 @@
 
                                                 var userEntry = $('#userEntryFive').val();
                                                 var splitEntry = userEntry.split(" ", 5);
+
+                                                if (splitEntry.length < 5) {
+                                                    $('#min').text('Please enter five numbers.');
+                                                    return;
+                                                };
 
                                                 $('#min').text('Minimum value: ' + min(splitEntry));
                                                 $('#max').text('Maximum value: ' + max(splitEntry));
@@ -663,6 +670,7 @@
 
                                                 var i = 0;
                                                 $.each(parseInt(splitEntry[i], 10));
+
                                                 for (i = 1; i <= 100; i++) {
                                                     newLine = "";
                                                     if ((i % splitEntry[0]) == 0 && (i % splitEntry[1]) == 0)

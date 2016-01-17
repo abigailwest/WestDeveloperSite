@@ -19,6 +19,11 @@
     function getValues() {
         var userEntry = $('#userEntryFive').val();
         var splitEntry = userEntry.split(" ", 5);
+        
+        if (splitEntry.length < 5) {
+            $('#min').text('Please enter five numbers.');
+            return;
+        };
 
         $('#min').text('Minimum value: ' + min(splitEntry));
         $('#max').text('Maximum value: ' + max(splitEntry));
@@ -155,7 +160,7 @@
 
     function getFact() {
 
-        if (factArray.length === 0) { factArray = refill(); };
+        if (factArray.length === 0) { factArray = refillFact(); };
 
         var randomIndex = Math.floor(Math.random() * factArray.length);
         $('#displayFact').html(factArray[randomIndex]);
@@ -163,7 +168,7 @@
         factArray.splice(randomIndex, 1);                  
      }
 
-    function refill() {
+    function refillFact() {
 
         return [
             "After moving to western NC, I worked for most of a year as a custom cabinet maker. They were so impressed with my efficiency and attention to detail that I was soon promoted to running the entire production floor.",
