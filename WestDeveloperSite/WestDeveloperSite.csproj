@@ -271,6 +271,7 @@
     <Content Include="assets\images\favicon.png" />
     <Content Include="assets\images\fizz.png" />
     <Content Include="assets\images\grabbing.png" />
+    <Content Include="assets\images\header-vintage.png" />
     <Content Include="assets\images\hero-evergreens.png" />
     <Content Include="assets\images\hero-maroonBells.png" />
     <Content Include="assets\images\light-logo-mine.png" />

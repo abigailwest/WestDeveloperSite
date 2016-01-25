@@ -1761,7 +1761,27 @@ p.copyright {
 
 }
 
-/* -------------------------------- Added by Abigail -----------------------------------------*/
+/* -------------------------------------------- Added by Abigail ------------------------------------------------------*/
+
+
+a span {
+    display:none;
+    position: absolute;
+    width: 130px;
+    bottom:0;
+    left:15px;
+}
+
+a:hover span {
+    display:block;
+}
+
+a {
+    position: relative;
+}
+
+
+/* FORMS */
 
 #userEntryFive, #userEntryFactorial, #userEntryFizz, #userEntryPalindrome {
     background-color: #a5f3e4;
@@ -1769,8 +1789,27 @@ p.copyright {
     font-weight: 200;
 }
 
+#getFact {
+    margin: 0 0 30px;
+}
+
+#displayFact {
+    position: absolute;
+    right:5%;
+    width: 50%;
+    color:#16a085;
+    padding: 5px;
+}
+
+
+/* TEXT DECORATION */
+
 .text-color {
     color:#16a085!important;
+}
+
+.text-black {
+    color:black;
 }
 
 .text-dimin {
@@ -1782,6 +1821,9 @@ p.copyright {
     font-style: italic;
 }
 
+
+/* PADDING AND MARGINS */
+
 .pad-top {
     padding-top:5px;
 }
@@ -1789,7 +1831,6 @@ p.copyright {
 .pad-bot {
     padding-bottom:5px;
 }
-
 
 .m-t-zero {
     margin-top: 0px!important;
@@ -1811,6 +1852,14 @@ p.copyright {
     max-height:50px;
 }
 
+.w-80p {
+    width:80%;
+    margin:0 auto;
+}
+
+
+/* CAROUSEL */
+
 .carousel-control {
     background-image:none!important;
     outline:none!important;
@@ -1818,6 +1867,7 @@ p.copyright {
     color:#16a085;
     width:30px;
 }
+
 .carousel:hover .carousel-control {
   visibility: visible;
 }
@@ -1834,6 +1884,7 @@ ol.carousel-indicators {
     position:relative;
     list-style-type:none;
     bottom:0;
+    font-size:1.3em;
 }
 
 .carousel-indicators li {
@@ -1851,9 +1902,18 @@ ol.carousel-indicators {
     margin: auto;
 }
 
+
+/* MODAL */
+
 .modal-header-size {
-    height:60px;
+    height:80px;
     padding:5px;
+}
+
+.modal-subtitle {
+    margin-bottom:0;
+    text-align:center;
+    font-style:italic;
 }
 
 #header-modal {
@@ -1871,6 +1931,9 @@ ol.carousel-indicators {
 
 }
 
+
+/* IMAGE */
+
 .image-align {
     vertical-align:middle;
 }
@@ -1879,30 +1942,119 @@ ol.carousel-indicators {
     margin-top:15%;
 }
 
-#getFact {
-    margin: 0 0 30px;
-}
 
-#displayFact {
-    position: absolute;
-    right:5%;
-    width: 50%;
-    color:#16a085;
-    padding: 5px;
-}
+/* BUTTONS */
 
-a {
-    position: relative;
-}
-
-a span {
-    display:none;
-    position: absolute;
-    width: 130px;
-    bottom:0;
-    left:15px;
-}
-
-a:hover span {
+.btn-center {
     display:block;
+    margin:auto;
+    margin-top:20px;
+    margin-bottom:20px;
+}
+
+
+/* ------------------------- CARFINDER ONLY------------------------------------*/
+
+body {
+    background:white;
+    background: repeating-linear-gradient(to right, white, black, white);
+}
+
+main {
+    width:100%;
+    max-width:1150px;
+    background-color:#f7f7f7;
+    padding: 50px 15px!important;
+    margin:auto;
+    position:relative;
+}
+
+main p {
+    text-align:center;
+    width:40%;
+    margin:auto;
+    margin-bottom:30px;
+}
+
+#banner  {
+    border-bottom:3px solid #16a085;
+    max-height:230px;
+}
+
+#search h3 {
+    margin:auto;
+    margin-bottom:30px;
+    text-align:center;
+    color:#a6a6a6;
+}
+
+.module-drk {
+    padding: 60px 0;
+    position: relative;
+    background-color:#111;
+    background-repeat: no-repeat;
+    background-position: center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.selectors {
+    box-sizing:border-box;
+    display:inline-block;
+    padding: 15px 75px;
+    margin:auto;
+    width:106%;
+    background:#111;
+    background: linear-gradient(to right, #111, #cccccc 3%, #111 8%, #111 92%, #cccccc 97%, #111);
+    position:absolute;
+    left:-3%;
+}
+
+
+
+/* ICONS */
+
+.techbox-icon {
+    background: #16a085;
+    position: relative;
+    text-align: center;
+    font-size: 26px;
+    color: #fff;
+    width: 150px;
+    height: 150px;
+    margin: 0 auto;
+    -webkit-border-radius: 100%;
+    -moz-border-radius: 100%;
+    border-radius: 100%;
+}
+
+.techbox-icon:after {
+	background: transparent;
+	border: 2px solid transparent;
+	position: absolute;
+	display: block;
+	content: "";
+	top: 0;
+	height: 150px;
+	width: 150px;
+	-webkit-border-radius: 100%;
+	   -moz-border-radius: 100%;
+	     -o-border-radius: 100%;
+	        border-radius: 100%;
+	-webkit-transition: all 0.3s cubic-bezier(0.62, -0.37, 0.5, 1.64) 0s;
+	   -moz-transition: all 0.3s cubic-bezier(0.62, -0.37, 0.5, 1.64) 0s;
+	    -ms-transition: all 0.3s cubic-bezier(0.62, -0.37, 0.5, 1.64) 0s;
+	     -o-transition: all 0.3s cubic-bezier(0.62, -0.37, 0.5, 1.64) 0s;
+	        transition: all 0.3s cubic-bezier(0.62, -0.37, 0.5, 1.64) 0s;
+}
+
+.techbox-icon:hover:after {
+	border-color: #16a085;
+	-webkit-transition: scale(1.2);
+	    -moz-transform: scale(1.2);
+	     -ms-transform: scale(1.2);
+	      -o-transform: scale(1.2);
+	         transform: scale(1.2);
 }
