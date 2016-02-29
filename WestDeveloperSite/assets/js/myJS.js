@@ -177,7 +177,7 @@
             "In 2010, my now-husband and I hiked 1,300 miles on the Pacific Crest Trail - from the south end of the Sierra Nevada, CA, to Crater Lake, OR. We were on the trail for two and a half months!",
             "While studying abroad in Chile, I conducted a research experiment on the effect of community arts on social change.  Through this, I took part in mural and graffiti campaigns, and interviewed several former leaders of the movement against the dictator Augusto Pinochet.",
             "In 2011, I spoke on a 'Women in Business' panel at the Carolina Farm Stewardship Association’s Sustainable Agriculture Conference in North Carolina. I was the youngest participant.",
-            "While acquiring my BFA, I focused on large-format woodcuts. Several of them are over 2' x 3' in size, and include over 150 hours of drawing and carving."
+            "While acquiring my BFA, I focused on large-format woodcuts. Several of them are over 2' x 3' in size, and include over 150 hours of drawing and carving time."
         ];
     }
 
