@@ -154,6 +154,28 @@
         $('#carousel-javascript').carousel('pause');
     });
    
+    //KITTEN
+    //$('#headshot-kitten').on('hover', function () {
+    //    $('#headshot-kitten').show("fast", function () {
+    //        $('#headshot-kitten').hide();
+    //    })
+    //})
+    $(window).load(function () {
+        $('#headshot-kitten').hide();
+        $('#hover').mouseenter(function () {
+            //$('#headshot').fadeOut();
+            $('#headshot-kitten').fadeIn('fast', function(){
+                $('#headshot-kitten').fadeOut(1000);
+                //$('#headshot').fadeIn()
+            });
+        })
+    })
+    //window.kittenAttack = function() {
+    //    $('#headshot-kitten').fadeIn('fast', function () {
+    //        $('#headshot-kitten').fadeOut(2000);
+    //    })
+    //}
+
     //FUN FACT
 
     var factArray = [];

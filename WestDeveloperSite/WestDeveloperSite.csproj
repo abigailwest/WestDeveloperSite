@@ -198,7 +198,6 @@
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
-    <Compile Include="Controllers\StoryWriterController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -273,6 +272,8 @@
     <Content Include="assets\images\fizz.png" />
     <Content Include="assets\images\grabbing.png" />
     <Content Include="assets\images\header-vintage.png" />
+    <Content Include="assets\images\headshot-3-kitten.jpg" />
+    <Content Include="assets\images\headshot-3.jpg" />
     <Content Include="assets\images\hero-evergreens.png" />
     <Content Include="assets\images\hero-maroonBells.png" />
     <Content Include="assets\images\hero-maroonlake.png" />
@@ -309,6 +310,7 @@
     <Content Include="assets\images\portfolio-single\single-6.jpg" />
     <Content Include="assets\images\portfolio-single\single-7.jpg" />
     <Content Include="assets\images\portfolio-single\single-700x700.jpg" />
+    <Content Include="assets\images\portfolio-sleuth.png" />
     <Content Include="assets\images\portrait.png" />
     <Content Include="assets\images\post-1.jpg" />
     <Content Include="assets\images\post-2.jpg" />
@@ -350,9 +352,6 @@
     <Content Include="carfinder.html" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
-    <Content Include="Content\storyCtrl.js" />
-    <Content Include="Content\storyWriter.css" />
-    <Content Include="Content\storyWriter.js" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
@@ -406,6 +405,7 @@
     <Content Include="assets\fonts\Stroke-Gap-Icons.ttf" />
     <Content Include="assets\fonts\Stroke-Gap-Icons.woff" />
     <Content Include="assets\php\contact.php" />
+    <Content Include="assets\images\Abigail_West_CV.pdf" />
     <None Include="Properties\PublishProfiles\awest - FTP.pubxml" />
     <None Include="Properties\PublishProfiles\awest - Web Deploy.pubxml" />
     <Content Include="Scripts\errors.json" />

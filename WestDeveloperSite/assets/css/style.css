@@ -1942,6 +1942,22 @@ ol.carousel-indicators {
     margin-top:15%;
 }
 
+#headshot {
+    margin:25px 50px;
+}
+
+#hover {
+    position:relative;
+}
+
+#headshot-kitten {
+    position:absolute;
+    /*top:25px;
+    left:50px;*/
+    display:none;
+    margin:0 50px;
+}
+
 
 /* BUTTONS */
 
@@ -1950,6 +1966,10 @@ ol.carousel-indicators {
     margin:auto;
     margin-top:20px;
     margin-bottom:20px;
+}
+
+.btn-pad {
+    margin:10px 0;
 }
 
 
@@ -2058,3 +2078,4 @@ main p {
 	      -o-transform: scale(1.2);
 	         transform: scale(1.2);
 }
+
